@@ -1,5 +1,31 @@
+.board {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .chess-wrap {
   width: 50px;
   height: 50px;
   box-sizing: border-box;
+  border: 2px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chess-wrap .chess {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.chess-wrap .chess-black {
+  background-image: radial-gradient(#fff, #000);
+}
+
+.chess-wrap .chess-red {
+  background-image: radial-gradient(#fff, #f00);
 }
