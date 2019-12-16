@@ -1,7 +1,6 @@
 import React from "react";
 import Board from "./Board";
 import { ChessType, GameStatus } from "../type/enum";
-import Chess from "./Chess";
 
 interface IState {
   chesses: ChessType[];
@@ -40,7 +39,7 @@ export default class Game extends React.PureComponent<{}, IState> {
   };
 
   handleClick = (num: number) => {
-    const { chesses, isGameOver, nextChess } = this.state;
+    const { chesses, nextChess } = this.state;
     const newChesses = [...chesses];
     newChesses[num] = nextChess;
     const newNextChess =
